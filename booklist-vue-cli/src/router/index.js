@@ -1,7 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import InicioView from '../views/InicioView.vue';
-import ListaLibros from '../views/ListaLibros.vue';
-import DetalleLibro from '../views/DetalleLibro.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import InicioView from '../views/InicioView.vue'
+import ListaLibros from '../views/ListaLibros.vue'
+import DetalleLibro from '../views/DetalleLibro.vue'
 
 const routes = [
     {
@@ -20,11 +20,11 @@ const routes = [
         component: DetalleLibro,
         props: true // Permite pasar el parámetro :id como prop al componente
     }
-];
+]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL),
     routes
-});
+})
 
-export default router;
+export default router
